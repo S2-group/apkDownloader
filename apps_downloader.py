@@ -125,14 +125,14 @@ def main(download_fun: Callable[[str, str], None]):
         print('Using the {} downloader'.format(download_fun.__name__.upper()))
         for index, row in enumerate(csvreader):
             try:
-                print("App numero {}".format(index + 1))
+                print("App N {}".format(index + 1))
                 apk_path = TARGET_DIR + "/" + row['package_name'] + ".apk"
 
                 if os.path.isfile(apk_path):
-                    print("Salto il download di {}".format(row['package_name']))
+                    print("Skipping download of app {}".format(row['package_name']))
                     continue
 
-                print("Inizio il download di {}".format(row['package_name']))
+                print("Starting download of app {}".format(row['package_name']))
                 download_fun(row['package_name'], apk_path)
 
             except Exception as e:
