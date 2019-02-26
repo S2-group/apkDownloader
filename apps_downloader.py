@@ -8,7 +8,7 @@ import sys
 from bs4 import BeautifulSoup
 
 BASE_URL = "https://apkpure.com/"
-APP_LIST = "../app_annie_scraper/apps_no_dups.csv"
+APP_LIST = "apps_no_dups.csv"
 ERROR_LOG = "error_log.txt"
 MISSING_LIST = "missing_apks.txt"
 TARGET_DIR = "downloaded_apps"
